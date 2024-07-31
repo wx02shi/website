@@ -1,24 +1,7 @@
-const randomNameDecorator = (name) => {
-  const special = [
-    `🗿 ${name}`,
-    `${name} 🚀`,
-    <text>
-      🏎️💨 <text className="italic">{name}</text>
-    </text>,
-    `🆙 ${name}`,
-    `${name} 📣`,
-    `[${name}]`,
-    `${name}!`,
-  ];
-
-  const num = Math.floor(Math.random() * special.length * 4);
-
-  if (num < special.length) {
-    return special[num];
-  }
-
-  return `*${name}`;
-};
+import Section from "./components/Section";
+import randomNameDecorator from "./components/NameDecorator";
+import Position from "./components/Position";
+import Accordion from "./components/Accordion";
 
 const Header = () => (
   <header className="my-8">
@@ -35,7 +18,7 @@ const Header = () => (
         engineering
       </p>
       <p>
-        {`Pursuing fall 2024 internships + \n spring 2025 full-time opportunities!`}
+        {`Pursuing fall 2024 internships + \n spring 2025 full-time opportunities`}
       </p>
     </div>
 
@@ -49,30 +32,73 @@ const Header = () => (
 );
 
 const Education = () => (
-  <section className="my-8">
-    <h2 className="text-2xl font-semibold">Education</h2>
-    <div className="mt-4">
-      <h3 className="text-xl font-medium">University Name</h3>
-      <p className="text-sm">Degree | Graduation Year</p>
-    </div>
-  </section>
+  <Section title="Education">
+    <h3 className="text-lg font-medium">University of Waterloo</h3>
+    <p className="italic">Honours Bachelor of Computer Science</p>
+    <p>April 2025 (expected)</p>
+  </Section>
 );
 
-const Skills = () => (
-  <section className="my-8">
-    <h2 className="text-2xl font-semibold">Skills</h2>
-    <ul className="list-disc list-inside mt-4">
-      <li>Programming Language 1</li>
-      <li>Programming Language 2</li>
-      <li>Technology 1</li>
-      <li>Technology 2</li>
-    </ul>
-  </section>
-);
+const Skills = () => {
+  const skillsList = [
+    "Python",
+    "C++",
+    "TypeScript",
+    "Java",
+    "Go",
+    "React",
+    "Node",
+    "FastAPI",
+    "Spring",
+    "PyTorch",
+    "TensorFlow",
+    "Huggingface",
+    "Flutter",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "MongoDB",
+  ];
+
+  return (
+    <Section title="Skills">
+      <p className="whitespace-pre-line">{skillsList.join(" • ")}</p>
+    </Section>
+  );
+};
 
 const Experience = () => (
-  <section className="my-8">
-    <h2 className="text-2xl font-semibold">Work Experience</h2>
+  <Section title="Experience">
+    <Position
+      company="Keplar.io"
+      role="ML Engineer Intern"
+      duration="May 2024 - present"
+      location="San Francisco"
+    >
+      <p>Hot take: "ChatGPT wrappers" are hard!</p>
+      <p className="whitespace-pre-line">
+        {`Worked for an early-stage startup,
+        on the cutting-edge of agentic AI systems:
+        infra, reliability, prod scale
+        + benchmarking & training models`}
+      </p>
+      <Accordion>
+        <ul>
+          <li>
+            Shipped new projects & features (Node, Python, Postgres) for
+            early-stage startup
+          </li>
+          <li>
+            Trained vision models, built infra to support video file formats
+          </li>
+          <li>
+            Created evals for actionable insights → converted 5 B2B pilots to
+            full customers
+          </li>
+          <li>Led infra refactor to save ~50 dev hours</li>
+        </ul>
+      </Accordion>
+    </Position>
     <div className="mt-4">
       <h3 className="text-xl font-medium">Company Name</h3>
       <p className="text-sm">Job Title | Duration | Location</p>
@@ -93,7 +119,7 @@ const Experience = () => (
         </li>
       </ul>
     </div>
-  </section>
+  </Section>
 );
 
 const Activities = () => (

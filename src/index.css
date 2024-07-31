@@ -13,6 +13,10 @@ body {
   a {
     @apply text-black underline decoration-gray-400 underline-offset-4 decoration-0;
   }
+
+  ul {
+    @apply list-disc list-inside;
+  }
 }
 
 @tailwind base;
