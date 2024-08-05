@@ -17,9 +17,7 @@ const Header = () => (
         + diverse work experience in fintech, crypto, fullstack, and data
         engineering
       </p>
-      <p>
-        {`Pursuing fall 2024 internships + \n spring 2025 full-time opportunities`}
-      </p>
+      <p>Pursuing spring 2025 full-time roles</p>
     </div>
 
     <div className="mt-8 space-x-4">
@@ -75,14 +73,15 @@ const Experience = () => (
       duration="May 2024 - present"
       location="San Francisco"
     >
-      <p>Hot take: "ChatGPT wrappers" are hard!</p>
-      <p className="whitespace-pre-line">
-        {`Worked for an early-stage startup,
-        on the cutting-edge of agentic AI systems:
+      <div className="mt-4 space-y-2 whitespace-pre-line">
+        <p className="whitespace-pre-line">
+          {`Worked for an early-stage startup,
+        on the cutting-edge of agentic AI + RAG:
         infra, reliability, prod scale
         + benchmarking & training models`}
-      </p>
-      <Accordion>
+        </p>
+      </div>
+      <Accordion className="mt-2">
         <ul>
           <li>
             Shipped new projects & features (Node, Python, Postgres) for
@@ -99,26 +98,69 @@ const Experience = () => (
         </ul>
       </Accordion>
     </Position>
-    <div className="mt-4">
-      <h3 className="text-xl font-medium">Company Name</h3>
-      <p className="text-sm">Job Title | Duration | Location</p>
-      <ul className="list-disc list-inside mt-2">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </li>
-      </ul>
-    </div>
-    <div className="mt-4">
-      <h3 className="text-xl font-medium">Company Name</h3>
-      <p className="text-sm">Job Title | Duration | Location</p>
-      <ul className="list-disc list-inside mt-2">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </li>
-      </ul>
-    </div>
+    <Position
+      company="Interac"
+      role="Software Engineer Intern"
+      duration="Sep 2023 - Dec 2023"
+      location="Toronto"
+    >
+      <div className="mt-4 space-y-2 whitespace-pre-line">
+        <p>
+          R&D of Open Banking system: customers use granular permissions to
+          control third-party access to their personal & financial data
+        </p>
+      </div>
+      <Accordion className="mt-2">
+        <ul>
+          <li>
+            Built Open Banking API for testing internal systems (Java, Spring,
+            Postgres)
+          </li>
+          <li>
+            Implemented security model to OAuth 2.0, OIDC, and Financial-grade
+            API standards
+          </li>
+          <li>
+            Designed granular permissions mechanisms according to RFC 9396; a
+            drop-in upgrade for archaic OAuth scope implementations
+          </li>
+        </ul>
+      </Accordion>
+    </Position>
+    <Position
+      company="Interac"
+      role="Software Engineer Intern"
+      duration="Jan 2023 - Apr 2023"
+      location="Toronto"
+    >
+      <div className="mt-4 space-y-2 whitespace-pre-line">
+        <p>
+          Laid groundwork ML + data infra to boost developer velocity, reduce
+          cloud costs, and advance company OKRs to leverage AI tech
+        </p>
+        <p>+ side hustle: upgrading the InfoSec system</p>
+      </div>
+      <Accordion className="mt-2">
+        <ul>
+          <li>
+            Architected cloud VM infra for existing and upcoming data and ML
+            workloads
+          </li>
+          <li>
+            Migrated existing projects to stateless NLP microservices, reducing
+            costs by 20%
+          </li>
+          <li>
+            Built data pipelines to run traditional NLP methods (ex. TF-IDF) on
+            ~10TB corpus
+          </li>
+          <li>
+            Created Outlook extension to detect email compliance breaches;
+            outperformed InfoSec system in prod by 47%
+          </li>
+        </ul>
+      </Accordion>
+    </Position>
   </Section>
 );
 

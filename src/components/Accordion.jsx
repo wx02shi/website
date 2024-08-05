@@ -1,12 +1,18 @@
 import React, { useState, useRef } from "react";
 import { useEffect } from "react";
 
-const Accordion = ({ children }) => {
+const Accordion = ({ children, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
   return (
-    <div>
+    <div className={className}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="italic underline underline-offset-4 decoration-gray-400 decoration-0"
+      >
+        {isOpen ? "See less" : "See more"}
+      </button>
       <div
         ref={contentRef}
         style={{
@@ -18,9 +24,6 @@ const Accordion = ({ children }) => {
       >
         {children}
       </div>
-      <button onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? "See less" : "See more"}
-      </button>
     </div>
   );
 };
