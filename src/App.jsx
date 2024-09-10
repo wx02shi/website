@@ -9,6 +9,9 @@ const Header = () => (
       {randomNameDecorator("william shi")}
     </h1>
     <div className="mt-6 space-y-4 whitespace-pre-line">
+      <p className="italic">
+        NOTE: site still under construction, apologies for any issues!
+      </p>
       <p>
         Upcoming software engineer, specializing in machine learning and
         distributed systems
@@ -21,10 +24,10 @@ const Header = () => (
     </div>
 
     <div className="mt-8 space-x-4">
-      <a href="https://github.com/yourusername">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
-      <a href="mailto:youremail@example.com">Email</a>
-      <a href="path/to/your/resume.pdf">Resume</a>
+      <a href="https://linkedin.com/in/wx02shi">LinkedIn</a>
+      <a href="mailto:wxshi@uwaterloo.ca">Email</a>
+      <a href="https://github.com/wx02shi">GitHub</a>
+      <a href="">Resume</a>
     </div>
   </header>
 );
@@ -33,7 +36,7 @@ const Education = () => (
   <Section title="Education">
     <h3 className="text-lg font-medium">University of Waterloo</h3>
     <p className="italic">Honours Bachelor of Computer Science</p>
-    <p>April 2025 (expected)</p>
+    <p>Apr 2025 (expected)</p>
   </Section>
 );
 
@@ -68,9 +71,19 @@ const Skills = () => {
 const Experience = () => (
   <Section title="Experience">
     <Position
+      company="Super.com"
+      role="Software Engineer Intern"
+      duration="Sep 2024 - present"
+      location="Toronto"
+    >
+      <div className="mt-4 space-y-2 whitespace-pre-line">
+        <p>Building fintech products again</p>
+      </div>
+    </Position>
+    <Position
       company="Keplar.io"
       role="ML Engineer Intern"
-      duration="May 2024 - present"
+      duration="May 2024 - Aug 2024"
       location="San Francisco"
     >
       <div className="mt-4 space-y-2 whitespace-pre-line">
@@ -161,21 +174,101 @@ const Experience = () => (
         </ul>
       </Accordion>
     </Position>
+    <Position
+      company="WSIB Innovation Lab"
+      role="Software Engineer Intern"
+      duration="May 2022 - Aug 2022"
+      location="Waterloo"
+    >
+      <div className="mt-4 space-y-2 whitespace-pre-line">
+        <p>
+          Revamped insurance service into mobile app to save $1M/yr in operating
+          costs
+        </p>
+        <Accordion className="mt-2">
+          <ul>
+            <li>
+              Built automations for 90% of claims processing ~ replacing human
+              review
+            </li>
+            <li>
+              Scaled tech stack to serve ~100k customers (Flutter, Node,
+              MongoDB)
+            </li>
+            <li>Implemented security and customer SSO (OAuth 2.0 + OIDC)</li>
+          </ul>
+        </Accordion>
+      </div>
+    </Position>
+    <Position
+      company="Paperminds AI"
+      role="Software Engineer Intern"
+      duration="May 2021 - Aug 2021"
+      location="Montreal"
+    >
+      <div className="mt-4 space-y-2 whitespace-pre-line">
+        <p>
+          Launched webapp MVP for early-stage startup, fast-tracking launch by 1
+          month
+        </p>
+        <p>
+          Worked on classical NLP, embeddings, and early Transformer-based
+          Language Models
+        </p>
+        <Accordion className="mt-2">
+          <ul>
+            <li>
+              Shipped end-end features: payments, booking, OAuth 2.0 (NextJS,
+              Postgres)
+            </li>
+            <li>
+              Used TF-IDF to accelerate search re-indexing (SBERT embeddings) by
+              20%
+            </li>
+          </ul>
+        </Accordion>
+      </div>
+    </Position>
   </Section>
 );
 
 const Activities = () => (
-  <section className="my-8">
-    <h2 className="text-2xl font-semibold">Projects</h2>
+  <Section title="Other stuff">
     <div className="mt-4">
-      <h3 className="text-xl font-medium">Project Name</h3>
-      <p className="text-sm">Brief description of the project.</p>
+      <h3 className="text-lg font-medium">BitNet b1.58</h3>
+      <p>Implemented Microsoft whitepaper on LLM optimization</p>
+      <p>Trained 100M model, wrote a custom CUDA inference kernel</p>
     </div>
     <div className="mt-4">
-      <h3 className="text-xl font-medium">Project Name</h3>
-      <p className="text-sm">Brief description of the project.</p>
+      <h3 className="text-lg font-medium">ZKML</h3>
+      <p>
+        (W24 URA) built experiments to benchmark zero knowledge proofs on neural
+        networks
+      </p>
     </div>
-  </section>
+    <div className="mt-4">
+      <h3 className="text-lg font-medium">Urban Congestion Modelling</h3>
+      <p>
+        MacHacks 2022 Winner. Trained a CNN to predict traffic congestion from
+        birds-eye-view maps, to help city planners
+      </p>
+    </div>
+    <div className="mt-4">
+      <h3 className="text-lg font-medium">Waterloo Blockchain</h3>
+      <p>Graphic designer during bull market</p>
+      <p>
+        <span className="line-through">freeloader</span> developer at our hacker
+        houses
+      </p>
+    </div>
+    <div className="mt-4">
+      <h3 className="text-lg font-medium">Siren</h3>
+      <p>
+        ETHGlobal Waterloo Winner. Created a Solidity debugging tool: generates
+        sequence diagrams on execution flow and gas fees
+      </p>
+    </div>
+  </Section>
 );
 
 function App() {
