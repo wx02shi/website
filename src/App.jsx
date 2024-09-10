@@ -27,7 +27,9 @@ const Header = () => (
       <a href="https://linkedin.com/in/wx02shi">LinkedIn</a>
       <a href="mailto:wxshi@uwaterloo.ca">Email</a>
       <a href="https://github.com/wx02shi">GitHub</a>
-      <a href="">Resume</a>
+      <a href="https://drive.google.com/file/d/1_VMpVSnP07EeZB_UoWnfZoFeiA0kiIpB/view?usp=sharing">
+        Resume
+      </a>
     </div>
   </header>
 );
