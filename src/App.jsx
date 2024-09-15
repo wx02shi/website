@@ -13,8 +13,8 @@ const Header = () => (
         NOTE: site still under construction, apologies for any issues!
       </p>
       <p>
-        Upcoming software engineer, specializing in machine learning and
-        distributed systems
+        Software engineer, specializing in machine learning and distributed
+        systems
       </p>
       <p>
         + diverse work experience in fintech, crypto, fullstack, and data
@@ -24,10 +24,16 @@ const Header = () => (
     </div>
 
     <div className="mt-8 space-x-4">
-      <a href="https://linkedin.com/in/wx02shi">LinkedIn</a>
-      <a href="mailto:wxshi@uwaterloo.ca">Email</a>
-      <a href="https://github.com/wx02shi">GitHub</a>
-      <a href="https://drive.google.com/file/d/1_VMpVSnP07EeZB_UoWnfZoFeiA0kiIpB/view?usp=sharing">
+      <a href="https://linkedin.com/in/wx02shi" target="_blank">
+        LinkedIn
+      </a>
+      <a href="mailto:wxshi@uwaterloo.ca" target="_blank">
+        Email
+      </a>
+      <a href="https://github.com/wx02shi" target="_blank">
+        GitHub
+      </a>
+      <a href="/resume.pdf" target="_blank">
         Resume
       </a>
     </div>
