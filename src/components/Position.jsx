@@ -8,14 +8,19 @@ const Position = ({ company, role, duration, location, children }) => (
       <text className="italic">{role}</text>
       <text>{location}</text>
     </div> */}
-    <h3 className="text-lg font-medium">
+    {/* <h3 className="text-lg font-medium">
       {company} • <span className="font-normal">{role}</span>
     </h3>
     <p className="italic text-sm mb-2">
       {duration} • {location}
     </p>
 
-    {children}
+    {children} */}
+    <div className="flex justify-between">
+      <text className="text-lg font-medium">{company}</text>
+      <text className="italic text-sm">{duration}</text>
+    </div>
+    <p>{role}</p>
   </div>
 );
 

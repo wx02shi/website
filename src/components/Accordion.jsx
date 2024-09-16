@@ -6,13 +6,7 @@ const Accordion = ({ children, className }) => {
   const contentRef = useRef(null);
 
   return (
-    <div className={className}>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="italic underline underline-offset-4 decoration-gray-400 decoration-0"
-      >
-        {isOpen ? "See less" : "See more"}
-      </button>
+    <div>
       <div
         ref={contentRef}
         style={{
@@ -24,6 +18,12 @@ const Accordion = ({ children, className }) => {
       >
         {children}
       </div>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="italic underline underline-offset-4 decoration-gray-400 decoration-0 w-full"
+      >
+        {isOpen ? "See less" : "See more"}
+      </button>
     </div>
   );
 };
