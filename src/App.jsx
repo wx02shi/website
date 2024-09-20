@@ -1,7 +1,6 @@
 import Section from "./components/Section";
 import randomNameDecorator from "./components/NameDecorator";
-import Position from "./components/Position";
-import Accordion from "./components/Accordion";
+import Accordion from "./components/Collapsible";
 import Event from "./components/Event";
 import { experience } from "./data";
 

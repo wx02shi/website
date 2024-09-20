@@ -1,3 +1,30 @@
+export const education = {
+  school: "University of Waterloo",
+  degree: "Bachelor of Science in Computer Science",
+  graduation: "04/25",
+  coursework: [],
+};
+
+export const skills = [
+  "Python",
+  "C++",
+  "TypeScript",
+  "Java",
+  "Go",
+  "React",
+  "Node",
+  "FastAPI",
+  "Spring",
+  "PyTorch",
+  "TensorFlow",
+  "Huggingface",
+  "Flutter",
+  "Docker",
+  "Kubernetes",
+  "PostgreSQL",
+  "MongoDB",
+];
+
 export const experience = [
   {
     company: "Super.com",
