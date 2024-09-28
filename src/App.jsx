@@ -2,7 +2,7 @@ import Section from "./components/Section";
 import randomNameDecorator from "./components/NameDecorator";
 import Accordion from "./components/Collapsible";
 import Event from "./components/Event";
-import { experience } from "./data";
+import { experience, education } from "./data";
 
 const Header = () => (
   <header className="my-8">
@@ -42,10 +42,11 @@ const Education = () => (
   <Section title="Education">
     <div className="-mx-2">
       <Event
-        company="University of Waterloo"
-        role="Bachelor of Computer Science"
-        duration="04/25"
-        icon="logos/uwaterloo.png"
+        company={education.school}
+        role={education.degree}
+        duration={education.graduation}
+        icon={education.icon}
+        summary={["Coursework:", education.coursework.join(", ")]}
       />
     </div>
   </Section>

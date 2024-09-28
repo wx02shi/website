@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import LinkIcon from "../icons/Link";
 import ExpandIcon from "../icons/Expand";
 
-const Event = ({ company, role, duration, icon, link }) => {
+const Event = ({ company, role, duration, icon, link, summary }) => {
   const [isHoverLink, setIsHoverLink] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
@@ -11,7 +11,7 @@ const Event = ({ company, role, duration, icon, link }) => {
     <div
       className={`p-2 rounded-xl ${
         isOpen ? "bg-gray-500 bg-opacity-5" : ""
-      } hover:bg-gray-700 hover:bg-opacity-5 transition duration-300 ease-in-out`}
+      } hover:bg-gray-700 hover:bg-opacity-5 transition duration-300 ease-in-out relative`}
       onClick={() => !isHoverLink && setIsOpen(!isOpen)}
     >
       <div className="flex items-start">
@@ -60,7 +60,6 @@ const Event = ({ company, role, duration, icon, link }) => {
           </div>
           <div className="flex justify-between items-center">
             <p className="text-sm">{role}</p>
-            <ExpandIcon />
           </div>
         </div>
       </div>
@@ -73,7 +72,20 @@ const Event = ({ company, role, duration, icon, link }) => {
           overflow: "hidden",
         }}
       >
-        a
+        {summary && (
+          <div className="flex flex-col gap-1 py-2">
+            {summary.map((line) => (
+              <p>{line}</p>
+            ))}
+          </div>
+        )}
+      </div>
+      <div
+        className={`absolute bottom-2 right-2 transition-transform duration-300 ease-in-out ${
+          isOpen ? "rotate-180" : ""
+        }`}
+      >
+        <ExpandIcon />
       </div>
     </div>
   );

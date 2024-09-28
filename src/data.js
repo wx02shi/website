@@ -2,7 +2,17 @@ export const education = {
   school: "University of Waterloo",
   degree: "Bachelor of Science in Computer Science",
   graduation: "04/25",
-  coursework: [],
+  icon: "logos/uwaterloo.png",
+  coursework: [
+    "Machine Learning",
+    "Algorithms",
+    "Operating Systems",
+    "Compilers",
+    "Data Structures",
+    "Networks",
+    "Databases",
+    "Statistics",
+  ],
 };
 
 export const skills = [
@@ -43,7 +53,7 @@ export const experience = [
     icon: "logos/keplar.png",
     link: "https://www.keplar.io/",
     summary: [
-      "Worked for an early-stage startup, on the cutting-edge of agentic AI + RAG: infra, reliability, prod scale",
+      "Worked on infra, reliability, prod scale for agentic AI + RAG at early-stage startup",
       "+ benchmarking & training models",
     ],
     details: [
@@ -95,7 +105,7 @@ export const experience = [
     icon: "logos/wsib.jpeg",
     link: "https://www.linkedin.com/company/wsib-innovation-lab/posts/?feedView=all",
     summary: [
-      "Revamped insurance service into mobile app to save $1M/yr in operating costs",
+      "Revamped insurance service into mobile app to reduce operating costs by 15%",
     ],
     details: [
       "Built automations for 90% of claims processing ~ replacing human review",
