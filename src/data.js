@@ -1,6 +1,6 @@
 export const education = {
   school: "University of Waterloo",
-  degree: "Bachelor of Science in Computer Science",
+  degree: "Honours Bachelor of Computer Science",
   graduation: "04/25",
   icon: "logos/uwaterloo.png",
   coursework: [
