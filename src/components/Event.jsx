@@ -1,18 +1,34 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 import LinkIcon from "../icons/Link";
 import ExpandIcon from "../icons/Expand";
+import { EventContext } from "../EventContext";
 
-const Event = ({ company, role, duration, icon, link, summary }) => {
+const Event = ({ company, role, duration, icon, link, summary, id }) => {
   const [isHoverLink, setIsHoverLink] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
+
+  const { eventOpen, setEventOpen } = useContext(EventContext);
+
+  const identifier = `${company}${role}${duration}${id}`;
+
+  useEffect(() => {
+    setIsOpen(eventOpen === identifier);
+  }, [eventOpen]);
+
+  const handleClick = () => {
+    if (!isHoverLink) {
+      if (!isOpen) setEventOpen(identifier);
+      else setEventOpen(null);
+    }
+  };
 
   return (
     <div
       className={`p-2 rounded-xl ${
         isOpen ? "bg-gray-500 bg-opacity-5" : ""
       } hover:bg-gray-700 hover:bg-opacity-5 transition duration-300 ease-in-out relative`}
-      onClick={() => !isHoverLink && setIsOpen(!isOpen)}
+      onClick={handleClick}
     >
       <div className="flex items-start">
         {icon && (
@@ -81,9 +97,9 @@ const Event = ({ company, role, duration, icon, link, summary }) => {
         )}
       </div>
       <div
-        className={`absolute bottom-2 right-2 transition-transform duration-300 ease-in-out ${
+        className={`${
           isOpen ? "rotate-180" : ""
-        }`}
+        } absolute bottom-2 right-2 transition-transform duration-300 ease-in-out `}
       >
         <ExpandIcon />
       </div>

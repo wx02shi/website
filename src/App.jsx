@@ -3,6 +3,7 @@ import randomNameDecorator from "./components/NameDecorator";
 import Accordion from "./components/Collapsible";
 import Event from "./components/Event";
 import { experience, education } from "./data";
+import { EventContextProvider } from "./EventContext";
 
 const Header = () => (
   <header className="my-8">
@@ -88,7 +89,7 @@ const Experience = () => {
     <Section title="Experience">
       <div className="-mx-2">
         {latest.map((exp, i) => (
-          <Event key={i} {...exp} />
+          <Event key={i} id={i} {...exp} />
         ))}
         <Accordion className="-mx-2">
           {rest.map((exp, i) => (
@@ -141,13 +142,15 @@ const Activities = () => (
 
 function App() {
   return (
-    <div className="max-w-md mx-auto p-4 mt-4 md:mt-32 text-gray-600">
-      <Header />
-      <Education />
-      <Skills />
-      <Experience />
-      <Activities />
-    </div>
+    <EventContextProvider>
+      <div className="max-w-md mx-auto p-4 mt-4 md:mt-32 text-gray-600">
+        <Header />
+        <Education />
+        <Skills />
+        <Experience />
+        <Activities />
+      </div>
+    </EventContextProvider>
   );
 }
 
