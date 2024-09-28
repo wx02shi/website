@@ -42,7 +42,7 @@ export const experience = [
     duration: "(present) 09/24",
     location: "Toronto",
     icon: "logos/super.svg",
-    link: "https:/www.super.com/",
+    link: "https://www.super.com/",
     summary: ["Building fintech products again"],
   },
   {
