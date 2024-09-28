@@ -130,3 +130,49 @@ export const experience = [
     ],
   },
 ];
+
+export const activities = [
+  {
+    title: "BitNet b1.58",
+    details: [
+      "Implemented Microsoft whitepaper on LLM optimization",
+      "Trained 100M model, wrote a custom CUDA inference kernel",
+    ],
+  },
+  {
+    title: "ZKML",
+    details: [
+      "(W24 URA) built experiments to benchmark zero knowledge proofs on neural networks",
+    ],
+  },
+  {
+    title: "Urban Congestion Modelling",
+    details: [
+      "MacHacks 2022 Winner. Trained a CNN to predict traffic congestion from birds-eye-view maps, to help city planners",
+    ],
+  },
+  {
+    title: "Waterloo Blockchain",
+    details: [
+      "Graphic designer during bull market",
+      <>
+        <span className="line-through">freeloader</span> developer at our hacker
+        houses
+      </>,
+    ],
+  },
+  {
+    title: "Network Membership Protocol",
+    details: ["Built gossip protocol multicasting for node failure detection"],
+  },
+  {
+    title: "Siren",
+    details: [
+      "ETHGlobal Waterloo Winner. Created a Solidity debugging tool: generates sequence diagrams on execution flow and gas fees",
+    ],
+  },
+  {
+    title: "Personal website",
+    details: ["You're looking at it right now!"],
+  },
+];

@@ -3,14 +3,15 @@ import LinkIcon from "../icons/Link";
 import ExpandIcon from "../icons/Expand";
 import { EventContext } from "../EventContext";
 
-const Event = ({ company, role, duration, icon, link, summary, id }) => {
+const Event = (props) => {
+  const { company, role, duration, icon, link, summary } = props;
   const [isHoverLink, setIsHoverLink] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
   const { eventOpen, setEventOpen } = useContext(EventContext);
 
-  const identifier = `${company}${role}${duration}${id}`;
+  const identifier = props;
 
   useEffect(() => {
     setIsOpen(eventOpen === identifier);
@@ -90,8 +91,8 @@ const Event = ({ company, role, duration, icon, link, summary, id }) => {
       >
         {summary && (
           <div className="flex flex-col gap-1 py-2">
-            {summary.map((line) => (
-              <p>{line}</p>
+            {summary.map((line, i) => (
+              <p key={i}>{line}</p>
             ))}
           </div>
         )}

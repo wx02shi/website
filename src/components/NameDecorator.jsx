@@ -9,13 +9,15 @@ const randomNameDecorator = (name) => {
     `${name} 📣`,
     `[${name}]`,
     `${name}!`,
+    `${name.replace(" ", "_")}.exe`,
   ];
 
-  const num = Math.floor(Math.random() * special.length * 4);
+  let num = Math.floor(Math.random() * special.length * 4);
 
   if (num < special.length) {
     return special[num];
   }
+  num = 6;
 
   return `*${name}`;
 };

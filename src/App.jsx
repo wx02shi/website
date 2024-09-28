@@ -1,8 +1,8 @@
 import Section from "./components/Section";
 import randomNameDecorator from "./components/NameDecorator";
-import Accordion from "./components/Collapsible";
+import Collapsible from "./components/Collapsible";
 import Event from "./components/Event";
-import { experience, education } from "./data";
+import { experience, education, skills, activities } from "./data";
 import { EventContextProvider } from "./EventContext";
 
 const Header = () => (
@@ -54,36 +54,17 @@ const Education = () => (
 );
 
 const Skills = () => {
-  const skillsList = [
-    "Python",
-    "C++",
-    "TypeScript",
-    "Java",
-    "Go",
-    "React",
-    "Node",
-    "FastAPI",
-    "Spring",
-    "PyTorch",
-    "TensorFlow",
-    "Huggingface",
-    "Flutter",
-    "Docker",
-    "Kubernetes",
-    "PostgreSQL",
-    "MongoDB",
-  ];
-
   return (
     <Section title="Skills">
-      <p className="whitespace-pre-line">{skillsList.join(" • ")}</p>
+      <p className="whitespace-pre-line">{skills.join(" • ")}</p>
     </Section>
   );
 };
 
 const Experience = () => {
-  const latest = experience.slice(0, 3);
-  const rest = experience.slice(3);
+  const cutoff = 3;
+  const latest = experience.slice(0, cutoff);
+  const rest = experience.slice(cutoff);
 
   return (
     <Section title="Experience">
@@ -91,54 +72,46 @@ const Experience = () => {
         {latest.map((exp, i) => (
           <Event key={i} id={i} {...exp} />
         ))}
-        <Accordion className="-mx-2">
+        <Collapsible className="-mx-2">
           {rest.map((exp, i) => (
             <Event key={i} {...exp} />
           ))}
-        </Accordion>
+        </Collapsible>
       </div>
     </Section>
   );
 };
 
-const Activities = () => (
-  <Section title="Other stuff">
-    <div className="mt-4">
-      <h3 className="text-lg font-medium">BitNet b1.58</h3>
-      <p>Implemented Microsoft whitepaper on LLM optimization</p>
-      <p>Trained 100M model, wrote a custom CUDA inference kernel</p>
-    </div>
-    <div className="mt-4">
-      <h3 className="text-lg font-medium">ZKML</h3>
-      <p>
-        (W24 URA) built experiments to benchmark zero knowledge proofs on neural
-        networks
-      </p>
-    </div>
-    <div className="mt-4">
-      <h3 className="text-lg font-medium">Urban Congestion Modelling</h3>
-      <p>
-        MacHacks 2022 Winner. Trained a CNN to predict traffic congestion from
-        birds-eye-view maps, to help city planners
-      </p>
-    </div>
-    <div className="mt-4">
-      <h3 className="text-lg font-medium">Waterloo Blockchain</h3>
-      <p>Graphic designer during bull market</p>
-      <p>
-        <span className="line-through">freeloader</span> developer at our hacker
-        houses
-      </p>
-    </div>
-    <div className="mt-4">
-      <h3 className="text-lg font-medium">Siren</h3>
-      <p>
-        ETHGlobal Waterloo Winner. Created a Solidity debugging tool: generates
-        sequence diagrams on execution flow and gas fees
-      </p>
-    </div>
-  </Section>
-);
+const Activities = () => {
+  const cutoff = 3;
+  const latest = activities.slice(0, cutoff);
+  const rest = activities.slice(cutoff);
+
+  return (
+    <Section title="Works">
+      {latest.map((activity, i) => (
+        <div className="mt-4" key={i}>
+          <h3 className="text-lg font-medium">{activity.title}</h3>
+          {activity.details.map((line, j) => (
+            <p key={j}>{line}</p>
+          ))}
+        </div>
+      ))}
+      <Collapsible>
+        <div className="pb-8">
+          {rest.map((activity, i) => (
+            <div className="mt-4" key={i}>
+              <h3 className="text-lg font-medium">{activity.title}</h3>
+              {activity.details.map((line, j) => (
+                <p key={j}>{line}</p>
+              ))}
+            </div>
+          ))}
+        </div>
+      </Collapsible>
+    </Section>
+  );
+};
 
 function App() {
   return (
