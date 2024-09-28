@@ -33,45 +33,35 @@ const Event = (props) => {
     >
       <div className="flex items-start">
         {icon && (
-          <a
-            className="mr-4"
+          <div
+            className="mr-4 relative rounded-lg overflow-hidden"
             onMouseEnter={() => setIsHoverLink(true)}
             onMouseLeave={() => setIsHoverLink(false)}
-            href={link}
-            target="_blank"
           >
-            <img src={icon} className="w-12 h-12 rounded-lg object-cover" />
-          </a>
+            <a href={link} target="_blank">
+              {link && (
+                <div
+                  className={`absolute flex inset-0 items-center justify-center ${
+                    isHoverLink ? "opacity-100" : "opacity-0"
+                  } transition duration-300 ease-in-out`}
+                >
+                  <LinkIcon />
+                </div>
+              )}
+
+              <img
+                src={icon}
+                className={`w-12 h-12 object-cover ${
+                  link && isHoverLink && "blur-md"
+                } transition duration-300 ease-in-out`}
+              />
+            </a>
+          </div>
         )}
         <div className="flex flex-col flex-grow">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <a
-                className="text-lg font-medium no-underline"
-                href={link}
-                target="_blank"
-                onMouseEnter={() => setIsHoverLink(true)}
-                onMouseLeave={() => setIsHoverLink(false)}
-              >
-                {company}
-              </a>
-              {link && (
-                <div
-                  className="pl-2"
-                  style={{
-                    opacity: isHoverLink ? 1 : 0,
-                    transition: "opacity 0.3s ease",
-                  }}
-                  onMouseEnter={() => {
-                    if (isHoverLink) setIsHoverLink(true);
-                  }}
-                  onMouseLeave={() => setIsHoverLink(false)}
-                >
-                  <a href={link} target="_blank">
-                    <LinkIcon />
-                  </a>
-                </div>
-              )}
+              <p className="text-lg font-medium no-underline">{company}</p>
             </div>
             <p className="text-xs italic text-gray-500">{duration}</p>
           </div>

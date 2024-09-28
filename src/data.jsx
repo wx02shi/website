@@ -146,12 +146,6 @@ export const activities = [
     ],
   },
   {
-    title: "Urban Congestion Modelling",
-    details: [
-      "MacHacks 2022 Winner. Trained a CNN to predict traffic congestion from birds-eye-view maps, to help city planners",
-    ],
-  },
-  {
     title: "Waterloo Blockchain",
     details: [
       "Graphic designer during bull market",
@@ -162,14 +156,20 @@ export const activities = [
     ],
   },
   {
-    title: "Network Membership Protocol",
-    details: ["Built gossip protocol multicasting for node failure detection"],
+    title: "Urban Congestion Modelling",
+    details: [
+      "MacHacks 2022 Winner. Trained a CNN to predict traffic congestion from birds-eye-view maps, to help city planners",
+    ],
   },
   {
     title: "Siren",
     details: [
       "ETHGlobal Waterloo Winner. Created a Solidity debugging tool: generates sequence diagrams on execution flow and gas fees",
     ],
+  },
+  {
+    title: "Network Membership Protocol",
+    details: ["Built gossip protocol multicasting for node failure detection"],
   },
   {
     title: "Personal website",
