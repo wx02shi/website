@@ -43,7 +43,10 @@ export const experience = [
     location: "Toronto",
     icon: "logos/super.svg",
     link: "https://www.super.com/",
-    summary: ["Building fintech products again"],
+    summary: [
+      "Cost-optimized payments via ACH transfer:",
+      "Reduce txn fees, increase revenue retention, and reduce risk + fraud",
+    ],
   },
   {
     company: "Keplar.io",
@@ -136,7 +139,7 @@ export const activities = [
     title: "BitNet b1.58",
     details: [
       "Implemented Microsoft whitepaper on LLM optimization",
-      "Trained 100M model, wrote a custom CUDA inference kernel",
+      "Wrote a custom CUDA inference kernel",
     ],
   },
   {
