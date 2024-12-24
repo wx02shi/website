@@ -24,19 +24,27 @@ const Header = () => (
 
     <div className="mt-8 space-x-4">
       <a href="https://linkedin.com/in/wx02shi" target="_blank">
-        LinkedIn
-      </a>
-      <a href="mailto:wxshi@uwaterloo.ca" target="_blank">
-        Email
+        Linkedin
       </a>
       <a href="https://github.com/wx02shi" target="_blank">
-        GitHub
+        Github
       </a>
       <a
         href="https://drive.google.com/file/d/1_VMpVSnP07EeZB_UoWnfZoFeiA0kiIpB/view?usp=sharing"
         target="_blank"
       >
         Resume
+      </a>
+      <a href="mailto:wxshi@uwaterloo.ca" target="_blank">
+        Email
+      </a>
+    </div>
+    <div className="mt-1 space-x-4">
+      <a
+        href="https://calendar.notion.so/meet/wx02shi/vm73i4lwa"
+        target="_blank"
+      >
+        Chat with me!
       </a>
     </div>
   </header>
