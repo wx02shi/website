@@ -1,7 +1,7 @@
 export const education = {
   school: "University of Waterloo",
   degree: "Honours Bachelor of Computer Science",
-  graduation: "04/25",
+  graduation: "exp. 04/25",
   icon: "logos/uwaterloo.png",
   coursework: [
     "Machine Learning",
@@ -45,7 +45,7 @@ export const experience = [
     link: "https://www.super.com/",
     summary: [
       "Cost-optimized payments via ACH transfer:",
-      "Reduce txn fees, increase revenue retention, and reduce risk + fraud",
+      "Reduce txn fees, risk/fraud, & increase revenue retention ",
     ],
   },
   {
