@@ -125,11 +125,9 @@ export const experience = [
     link: "https://www.linkedin.com/company/papermindsai/",
     summary: [
       "Launched webapp MVP for early-stage startup, fast-tracking launch by 1 month",
-      "Worked on classical NLP, embeddings, and early Transformer-based Language Models",
     ],
     details: [
       "Shipped end-end features: payments, booking, OAuth 2.0 (NextJS, Postgres)",
-      "Used TF-IDF to accelerate search re-indexing (SBERT embeddings) by 20%",
     ],
   },
 ];

@@ -32,7 +32,10 @@ const Header = () => (
       <a href="https://github.com/wx02shi" target="_blank">
         GitHub
       </a>
-      <a href="resume.pdf" target="_blank">
+      <a
+        href="https://drive.google.com/file/d/1_VMpVSnP07EeZB_UoWnfZoFeiA0kiIpB/view?usp=sharing"
+        target="_blank"
+      >
         Resume
       </a>
     </div>
