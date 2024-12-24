@@ -39,7 +39,7 @@ export const experience = [
   {
     company: "Super.com",
     role: "Software Engineer Intern",
-    duration: "(present) 09/24",
+    duration: "09/24 - 12/24",
     location: "Toronto",
     icon: "logos/super.svg",
     link: "https://www.super.com/",
