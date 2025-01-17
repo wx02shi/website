@@ -40,10 +40,7 @@ const Header = () => (
       </a>
     </div>
     <div className="mt-1 space-x-4">
-      <a
-        href="https://calendar.notion.so/meet/wx02shi/vm73i4lwa"
-        target="_blank"
-      >
+      <a href="https://cal.com/wx02shi/chat-with-me" target="_blank">
         Chat with me!
       </a>
     </div>
