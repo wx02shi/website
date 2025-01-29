@@ -19,7 +19,7 @@ const Header = () => (
         + diverse work experience in fintech, crypto, fullstack, and data
         engineering
       </p>
-      <p>Pursuing spring 2025 full-time roles</p>
+      <p>Pursuing spring 2025 new grad roles</p>
     </div>
 
     <div className="mt-8 space-x-4">
@@ -35,7 +35,7 @@ const Header = () => (
       >
         Resume
       </a>
-      <a href="mailto:wxshi@uwaterloo.ca" target="_blank">
+      <a href="mailto:wx02shi@gmail.com" target="_blank">
         Email
       </a>
     </div>

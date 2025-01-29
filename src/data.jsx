@@ -44,8 +44,8 @@ export const experience = [
     icon: "logos/super.svg",
     link: "https://www.super.com/",
     summary: [
-      "Cost-optimized payments via ACH transfer:",
-      "Reduce txn fees, risk/fraud, & increase revenue retention ",
+      "Money Movement team / Cash Advance product",
+      "Event-driven repayments to reduce txn fees, increase profitability via ACH transfers",
     ],
   },
   {
@@ -56,8 +56,8 @@ export const experience = [
     icon: "logos/keplar.png",
     link: "https://www.keplar.io/",
     summary: [
-      "Worked on infra, reliability, prod scale for agentic AI + RAG at early-stage startup",
-      "+ benchmarking & training models",
+      "Worked on fullstack, infra, evals for agentic + RAG webapp",
+      "Shipped rapidly to convert 5 B2B pilot customers to full contracts",
     ],
     details: [
       "Shipped new projects & features (Node, Python, Postgres) for early-stage startup",
@@ -74,7 +74,7 @@ export const experience = [
     icon: "logos/interac.png",
     link: "https://www.interac.ca/",
     summary: [
-      "R&D of Open Banking system: customers use granular permissions to control third-party access to their personal & financial data",
+      "R&D of Open Banking protocol: standardized and permissioned API to allow users granular control over financial data access",
     ],
     details: [
       "Built Open Banking API for testing internal systems (Java, Spring, Postgres)",
@@ -108,7 +108,7 @@ export const experience = [
     icon: "logos/wsib.jpeg",
     link: "https://www.linkedin.com/company/wsib-innovation-lab/posts/?feedView=all",
     summary: [
-      "Revamped insurance service into mobile app to reduce operating costs by 15%",
+      "Revamped insurance service into mobile app PoC to reduce operating costs by 15%",
     ],
     details: [
       "Built automations for 90% of claims processing ~ replacing human review",
@@ -144,6 +144,12 @@ export const activities = [
     title: "ZKML",
     details: [
       "(W24 URA) built experiments to benchmark zero knowledge proofs on neural networks",
+    ],
+  },
+  {
+    title: "Diffusion Model",
+    details: [
+      "Trained in PyTorch to generate 10px images of cars from the CIFAR-10 dataset",
     ],
   },
   {
