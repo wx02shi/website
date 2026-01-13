@@ -30,7 +30,7 @@ const Header = () => (
         Github
       </a>
       <a
-        href="https://drive.google.com/file/d/1_VMpVSnP07EeZB_UoWnfZoFeiA0kiIpB/view?usp=sharing"
+        href="https://drive.google.com/file/d/17pPXNouoinChh1EHGak70HTS_59u0D_D/view?usp=sharing"
         target="_blank"
       >
         Resume
@@ -51,6 +51,7 @@ const Education = () => (
   <Section title="Education">
     <div className="-mx-2">
       <Event
+        id="education-0"
         company={education.school}
         role={education.degree}
         duration={education.graduation}
@@ -78,11 +79,11 @@ const Experience = () => {
     <Section title="Experience">
       <div className="-mx-2">
         {latest.map((exp, i) => (
-          <Event key={i} id={i} {...exp} />
+          <Event key={`experience-${i}`} id={`experience-${i}`} {...exp} />
         ))}
         <Collapsible className="-mx-2">
           {rest.map((exp, i) => (
-            <Event key={i} {...exp} />
+            <Event key={`experience-${cutoff + i}`} id={`experience-${cutoff + i}`} {...exp} />
           ))}
         </Collapsible>
       </div>

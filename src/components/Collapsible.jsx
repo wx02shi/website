@@ -1,38 +1,31 @@
-import { useState } from "react";
-import { animated, useSpring, config } from "@react-spring/web";
-import useMeasure from "react-use-measure";
+import { useState, useCallback } from "react";
+import { animated } from "@react-spring/web";
+import { useExpandCollapse } from "../hooks/useExpandCollapse";
 import ChevronIcon from "../icons/Chevron";
 
-const Collapsible = ({ children }) => {
-  const [open, setOpen] = useState(false);
+const Collapsible = ({ children, defaultOpen = false }) => {
+  const [open, setOpen] = useState(defaultOpen);
 
-  const [measureRef, { height }] = useMeasure();
+  const { measureRef, animatedStyle } = useExpandCollapse(open);
 
-  const springs = useSpring({
-    from: {
-      height: 0,
-      opacity: 0,
-    },
-    to: {
-      height: open ? height : 0,
-      opacity: open ? 1 : 0,
-    },
-  });
+  const handleToggle = useCallback(() => {
+    setOpen((val) => !val);
+  }, []);
 
   return (
     <div>
-      <animated.div
-        style={{
-          overflow: "hidden",
-          ...springs,
-        }}
-      >
+      <animated.div style={animatedStyle}>
         <div ref={measureRef}>{children}</div>
       </animated.div>
-      <button className="w-full" onClick={() => setOpen((val) => !val)}>
+      <button
+        className="w-full"
+        onClick={handleToggle}
+        aria-expanded={open}
+        aria-label={open ? "Show less" : "Show more"}
+      >
         <div
-          className={`py-2 flex justify-center transform duration-300 hover:bg-gray-500 hover:bg-opacity-5 ease-in-out rounded-md ${
-            open ? "-scale-100" : ""
+          className={`py-2 flex justify-center transition-transform duration-300 hover:bg-gray-500 hover:bg-opacity-5 ease-in-out rounded-md ${
+            open ? "rotate-180" : ""
           }`}
         >
           <ChevronIcon />
