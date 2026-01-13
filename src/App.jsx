@@ -12,14 +12,13 @@ const Header = () => (
     </h1>
     <div className="mt-6 space-y-4 whitespace-pre-line">
       <p>
-        Software engineer, specializing in machine learning and distributed
-        systems
+        Software engineer, extensive experience in product-driven development. Some ML and distributed
+        systems on the side.
       </p>
       <p>
         + diverse work experience in fintech, crypto, fullstack, and data
         engineering
       </p>
-      <p>Pursuing spring 2025 new grad roles</p>
     </div>
 
     <div className="mt-8 space-x-4">

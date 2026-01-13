@@ -141,15 +141,15 @@ export const activities = [
     ],
   },
   {
-    title: "ZKML",
+    title: "Siren",
     details: [
-      "(W24 URA) built experiments to benchmark zero knowledge proofs on neural networks",
+      "ETHGlobal Waterloo Winner. Created a Solidity debugging tool: generates sequence diagrams on execution flow and gas fees",
     ],
   },
   {
-    title: "Diffusion Model",
+    title: "Urban Congestion Modelling",
     details: [
-      "Trained in PyTorch to generate 10px images of cars from the CIFAR-10 dataset",
+      "MacHacks 2022 Winner. Trained a CNN to predict traffic congestion from birds-eye-view maps, to help city planners",
     ],
   },
   {
@@ -163,15 +163,9 @@ export const activities = [
     ],
   },
   {
-    title: "Urban Congestion Modelling",
+    title: "Diffusion Model",
     details: [
-      "MacHacks 2022 Winner. Trained a CNN to predict traffic congestion from birds-eye-view maps, to help city planners",
-    ],
-  },
-  {
-    title: "Siren",
-    details: [
-      "ETHGlobal Waterloo Winner. Created a Solidity debugging tool: generates sequence diagrams on execution flow and gas fees",
+      "Trained in PyTorch to generate 10px images of cars from the CIFAR-10 dataset",
     ],
   },
   {
