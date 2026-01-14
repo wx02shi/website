@@ -38,6 +38,17 @@ export const skills = [
 export const experience = [
   {
     company: "Super.com",
+    role: "Software Engineer I",
+    duration: "06/25 - present",
+    location: "Toronto",
+    icon: "logos/super.svg",
+    link: "https://www.super.com/",
+    summary: [
+      "Building the Earnings product",
+    ],
+  },
+  {
+    company: "Super.com",
     role: "Software Engineer Intern",
     duration: "09/24 - 12/24",
     location: "Toronto",
